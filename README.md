@@ -1,15 +1,14 @@
 # Changes for Lab1
-L1: fork and clone to local computer. Programs had /Circles, /Coverage, /SimpleWebServer with /src and package struct as edu.nmsu.cs...
-Changes made:
-Hello: added project folder /HelloWorld with /src and package struct
-    added file called helloworld.java under /HelloWorld
-Questions: added new folder in root dir named /Questions
-    added 2 .txt to /Questions named p1Questions.txt, p2Questions.txt 
-Ant Buildfiles:
-    made build.xml for /Circles, /SimpleWebServer and touch
-readMe: updated.
-	forked from toupsz
-	MyID: jsy4
+*L1: fork and clone to local computer. Programs had /Circles, /Coverage, /SimpleWebServer with /src and package struct as edu.nmsu.cs...
+*Changes made:
+-[*]Hello: added project folder /HelloWorld with /src and package struct, added file called helloworld.java under /HelloWorld
+-[*]Questions: added new folder in root dir named /Questions, added 2 .txt to /Questions named p1Questions.txt, p2Questions.txt 
+-[*]Ant Buildfiles: made build.xml for /Circles, /SimpleWebServer and touched
+-[*]readMe: updated.
+	_forked from toupsz_
+-[*]MyID: jsy4
+
+:upside_down_face: https://github.com/jsy4/Programs
 
 
 # Programs
