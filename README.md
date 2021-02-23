@@ -18,7 +18,7 @@ Base code for program assignments in Software Development (C S 371).
 These assignments rely on the SimpleWebServer program. Each gets graded using tags in a cloned repository.
 
 * Changes made for Program 1: 
-	* Webworker.java: serves HTML files according to GET request from the url. Checks if the file exists and displays the HTML file(200.OK) or defaults to HTML page displaying error with status code 404. When reading and outputing HTML, it substitutes the tags <cs371date> and <cs371server>. 
+	* Webworker.java: serves HTML files according to GET request from the url. Checks if the file exists and displays the HTML file(200.OK) or defaults to HTML page displaying error with status code 404. When reading and outputing HTML, it substitutes tags. 
 	* build.xml: updated to <ant> (default: clean, compile) and <ant run> (runs program on port 8080) 
 	* p1.Questions.txt are answered.
 	* readMe: updated.
