@@ -1,0 +1,24 @@
+<project name="SimpleWebServer" default="cleancompile" basedir=".">
+  <description> SimpleWebServer build file </description>
+	
+  <property name="src" location="src/"/>
+  <property name="bin" location="bin/"/>
+
+  <target name="run" description ="launch on default port">
+	<java classname="edu.nmsu.cs.webserver.WebServer" fork="true" classpath="${bin}" dir =".">
+	  <arg value ="8080"/>
+	</java>
+  </target>
+
+  <target name="cleancompile" depends = "clean, compile"/>
+
+  <target name="compile" description="compile the src to bin dir">
+    <mkdir dir="${bin}"/>
+    <javac srcdir="${src}" destdir="${bin}"/>
+  </target>
+
+  <target name="clean" description="clean up made obj ${bin}">
+    <delete dir="${bin}"/>
+  </target>
+
+</project>
