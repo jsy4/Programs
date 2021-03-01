@@ -1,5 +1,7 @@
 package edu.nmsu.cs.webserver;
 
+import java.awt.image.BufferedImage;
+
 /** pulled from https://github.com/NMSU-SDev/Programs, modified by jsy4
  * Web worker: an object of this class executes in its own new thread to receive and respond to a
  * single HTTP request. After the constructor the object executes on its "run" method, and leaves
@@ -22,6 +24,7 @@ package edu.nmsu.cs.webserver;
  **/
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -30,6 +33,8 @@ import java.net.Socket;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.TimeZone;
+
+import javax.imageio.ImageIO;
 
 public class WebWorker implements Runnable
 {
@@ -141,7 +146,7 @@ public class WebWorker implements Runnable
 //			- should be better
 //			default(HTML) if no given input on port8080, or if it ends with .HTML, else below
 			if(fileName.endsWith(".ico"))
-			contentType = "image/x-icon";
+				contentType = "image/x-icon";
 			else if(fileName.endsWith(".gif"))
 				contentType = "image/gif";
 			else if(fileName.endsWith(".jpg"))
@@ -193,25 +198,27 @@ public class WebWorker implements Runnable
 			}//end if
 			else 
 			{ //file exists to read
-				BufferedReader br = new BufferedReader(new FileReader(fileName));
-				String line;
 				if(fileName.endsWith(".html")) 
 				{ // substitute tags in HTML files
+					BufferedReader br = new BufferedReader(new FileReader(fileName));
+					String line;
 					String today = new java.util.Date().toString();
 					for(line = br.readLine(); line !=null; line = br.readLine()) {
 						line = line.replaceAll("<cs371date>", today);
 						line = line.replaceAll("<cs371server>", "Jisun's Server");
 						os.write(line.getBytes());
 					}//end for
+					br.close();
 				}//end if
 				else 
-				{ // nothing defined for writing over other types yet; just output the file content
-					for(line = br.readLine(); line != null; line = br.readLine()) {
-						os.write(line.getBytes());
-					}//end for
+				{ // reading the image types https://docs.oracle.com/javase/tutorial/2d/images/saveimage.html
+					BufferedImage img = null;
+				    img = ImageIO.read(new File(fileName));
+				    //https://www.baeldung.com/java-file-extension
+				    String type = fileName.substring(fileName.lastIndexOf(".")+1);
+				    ImageIO.write(img, type, os);
 				}//end else
 				
-				br.close();
 			}// end else
 		}catch(Exception e) {
 			os.write("Sorry...Error! File couldn't be read correctly. CODE: 404 Not Found.".getBytes());
