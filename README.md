@@ -25,9 +25,7 @@ These assignments rely on the SimpleWebServer program. Each gets graded using ta
 
 * Changes made for Program 2:
 	* WebServer is now changed to serve image file types GIF, JPEG, PNG.
-	* www subfolder :has the image files that are less than 10KB (jpgTest.jpg, pngTest.png, gifTest.gif, favicon.ico)
-	* www folder contains two test HTML files test1.html, test2.html, and these files in www uses the image files using <img> tag.
-	* included /res/acc/test.html for testing in www subdirectory.
+	* www subfolder: has the image files that are less than 10KB (jpgTest.jpg, pngTest.png, gifTest.gif, favicon.ico). It also contains two test HTML files test1.html, test2.html, and these files in www uses the image files using html img tag. Also included /res/acc/test.html for testing in www subdirectory.
 	* build.xml: the ant command itself will now clean, comiple, run. ant gets the source code from the root directory SimpleWebServer and runs the code in subdirectory www, creating bin directory there to run.
 
 
