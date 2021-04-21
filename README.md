@@ -34,5 +34,13 @@ These assignments rely on the SimpleWebServer program. Each gets graded using ta
 ## Program 3
 This assignment relies on the Coverage programs. 
 
+* Changes made for Program 3:
+	* /lib: added a folder to contain compiled libraries for Jacoco's 7 jar files
+	* build.xml: ant clean command will now delete the bin directory along with classfiles. 100% coverage testing of RacingScore1.java, RacingScore2.java is written with corresponding echo messages.
+	* RacingScore1 and RacingScore2 now correctly finds sum of 2 largest score out of 3 int arguments given.
+	* RacingScore1.java: corrected overallScore() to compare score1 and score2 to find smallest s. Made final variable for the score range 0-50(inclusive) and added in main to check if args are in range.
+	* RacingScore2.java: corrected overallScore() to include correct case when 3 scores are same and removed unnecessary variables. Made final variable for the score range 0-50(inclusive) to avoid magic nums.
+	* readMe: Updated.
+
 ## Program 4
 This assignment relies on the Circles programs. 
