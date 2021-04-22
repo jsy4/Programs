@@ -40,7 +40,7 @@ This assignment relies on the Coverage programs.
 	* build.xml: ant clean command will now delete the bin directory along with classfiles. 100% coverage testing of RacingScore1.java, RacingScore2.java is written with corresponding echo messages.
 	* RacingScore1 and RacingScore2 now correctly finds sum of 2 largest score out of 3 int arguments given.
 	* RacingScore1.java: corrected overallScore() to compare score1 and score2 to find smallest s. Made final variable for the score range 0-50(inclusive) and added in main to check if args are in range.
-	* RacingScore2.java: corrected overallScore() to include correct case when 3 scores are same and removed unnecessary variables. Made final variable for the score range 0-50(inclusive) to avoid magic nums.
+	* RacingScore2.java: corrected overallScore() to include correct case when 3 scores are same and removed unnecessary variables. Made final variable for the score range 0-50(inclusive) to avoid magic nums. Removed if(args==null) since String args[] is empty string array instead of null ref.
 	* readMe: Updated.
 
 ## Program 4
