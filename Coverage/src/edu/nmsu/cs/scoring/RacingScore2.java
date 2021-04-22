@@ -40,10 +40,10 @@ public class RacingScore2
 		if (score1 <= score2 && score1 <= score3)
 			return score2 + score3;
 		
-		else if (score2 <= score1 && score2 <= score3)
+		else if (score2 < score1 && score2 < score3)
 			return score1 + score3; 
 		
-		else //if (score3 <= score1 && score3 <= score2)
+		else //if (score3 < score1 && score3 < score2)
 			return score1 + score2;
 
 	}
