@@ -9,7 +9,7 @@ package edu.nmsu.cs.circles;
  * here just so you see what is happening. You should not have them in your test cases.
  ***/
 
-import org.junit.*;
+import org.junit.*; 
 import org.junit.jupiter.api.Test;
 
 public class Circle1Test
