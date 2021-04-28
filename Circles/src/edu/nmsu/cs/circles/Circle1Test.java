@@ -10,7 +10,6 @@ package edu.nmsu.cs.circles;
  ***/
 
 import org.junit.*; 
-import org.junit.jupiter.api.Test;
 
 public class Circle1Test
 {
