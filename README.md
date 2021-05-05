@@ -35,7 +35,7 @@ These assignments rely on the SimpleWebServer program. Each gets graded using ta
 This assignment relies on the Coverage programs. 
 
 * Changes made for Program 3:
-	* /lib: added a folder to contain compiled libraries for Jacoco's 7 jar files
+	* /lib: added a folder to contain compiled libraries for Jacoco's 7 jar files https://www.jacoco.org/jacoco/trunk/index.html (Copyright © 2009, 2021 Mountainminds GmbH & Co. KG and Contributors)
 	* gitignore: added to ignoring of target directory being committed to github
 	* build.xml: ant clean command will now delete the bin directory along with classfiles. 100% coverage testing of RacingScore1.java, RacingScore2.java is written with corresponding echo messages.
 	* RacingScore1 and RacingScore2 now correctly finds sum of 2 largest score out of 3 int arguments given.
@@ -45,3 +45,10 @@ This assignment relies on the Coverage programs.
 
 ## Program 4
 This assignment relies on the Circles programs. 
+
+* Changes made for Program 4:
+	* /lib: added folder for junit.jars and hamcrest https://junit.org/junit4/license.html (Copyright © 2002-2021 JUnit. All Rights Reserved.),  https://search.maven.org/artifact/org.hamcrest/hamcrest-core/1.3/jar (Copyright ©2017-present Sonatype, Inc.)
+	* .java classes: fixed.
+	* build.xml: clean(rm bin dir), compile(javac all java to make jar), run(CircleRun.java only), test(depends on testCircle1,2), testCircle1(tests Circle1.java), testCircle2(tests Circle2.java).
+	* readMe: Updated.
+
