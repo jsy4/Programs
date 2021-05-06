@@ -25,7 +25,7 @@ public class Circle1Test
 	{
 		System.out.println("\nTest starting...");
 		circle1 = new Circle1(1, 2, 3);
-		circle2 = new Circle1(10, 10, 3);
+		circle2 = new Circle1(0, 0, 0);
 		circle3 = new Circle1(-2, 1, 9);
 		
 	}
@@ -67,7 +67,7 @@ public class Circle1Test
 	//
 	@Test
 	public void simpleIntersects10()
-	{
+	{//found error for Circle1 intersects() 
 		Assert.assertTrue( false == circle1.intersects(circle2));
 		
 	}
@@ -77,8 +77,8 @@ public class Circle1Test
 	//
 	@Test
 	public void simpleIntersects11()
-	{ //found error for Circle1 intersects() 
-		Assert.assertTrue( true == circle1.intersects(circle3));
+	{ 
+		Assert.assertTrue( false == circle1.intersects(circle3));
 		
 	}
 	//extra cases if I ran test with prototypes only:
