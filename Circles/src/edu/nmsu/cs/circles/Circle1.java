@@ -11,6 +11,9 @@ public class Circle1 extends Circle
 	public boolean intersects(Circle other)
 	{
 		if ( Math.pow(center.x - other.center.x, 2) +
+				Math.pow(center.y - other.center.y, 2) < Math.pow(radius-other.radius, 2)) //check if contained instruction says outer edge
+			return false;
+		else if ( Math.pow(center.x - other.center.x, 2) +
 				Math.pow(center.y - other.center.y, 2) <= Math.pow(radius+other.radius, 2))
 			return true;
 		return false;
