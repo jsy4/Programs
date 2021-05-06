@@ -26,7 +26,7 @@ public class Circle2Test
 		System.out.println("\nTest starting...");
 		circle1 = new Circle2(1, 2, 3);
 		circle2 = new Circle2(0, 0, 0);
-		circle3 = new Circle2(-2, 1, 9);
+		circle3 = new Circle2(2, 1, 4);
 		
 	}
 
@@ -78,7 +78,7 @@ public class Circle2Test
 	@Test
 	public void simpleIntersects21()
 	{
-		Assert.assertTrue( false == circle1.intersects(circle3));
+		Assert.assertTrue( true == circle1.intersects(circle3));
 		
 	}
 	//extra cases if I ran test with prototypes only:
