@@ -25,7 +25,7 @@ public class Circle2Test
 	{
 		System.out.println("\nTest starting...");
 		circle1 = new Circle2(1, 2, 3);
-		circle2 = new Circle2(0, 0, 0);
+		circle2 = new Circle2(0, 0, 6);
 		circle3 = new Circle2(2, 1, 4);
 		
 	}
